@@ -1,0 +1,19 @@
+/* Projects.module.css */
+.projectsContainer {
+    padding: 20px;
+  }
+  
+  .projectItem {
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+  }
+  
+  .projectItem h2 {
+    color: #333;
+  }
+  
+  /* Add more specific styles for your project items here */
+  
