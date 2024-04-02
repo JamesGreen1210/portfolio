@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import styles from '../styles/Projects.module.css';
+import downloadImage from '../assets/download.png'; // Import the image
+
 
 function Projects() {
   const projects = [
@@ -7,67 +9,54 @@ function Projects() {
       id: 1,
       name: 'Project 1',
       description: 'This is a description of Project 1.',
-      image: '../assets/download.png'
+      image: downloadImage
     },
     {
       id: 2,
       name: 'Project 2',
       description: 'This is a description of Project 2.',
-      image: '../assets/download.png'
+      image: downloadImage
     },
     {
       id: 3,
       name: 'Project 3',
       description: 'This is a description of Project 3.',
-      image: '../assets/download.png'
+      image: downloadImage
     },
     {
       id: 4,
       name: 'Project 4',
       description: 'This is a description of Project 4.',
-      image: '../assets/download.png'
+      image: downloadImage
     },
     {
       id: 5,
       name: 'Project 5',
       description: 'This is a description of Project 5.',
-      image: '../assets/download.png'
+      image: downloadImage
     },
     {
       id: 6,
       name: 'Project 6',
       description: 'This is a description of Project 6.',
-      image: '../assets/download.png'
+      image: downloadImage
     },
-    {
-      id: 7,
-      name: 'Project 7',
-      description: 'This is a description of Project 7.',
-      image: '../assets/download.png'
-    },
-    {
-      id: 8,
-      name: 'Project 8',
-      description: 'This is a description of Project 8.',
-      image: '../assets/download.png'
-    },
-    {
-      id: 9,
-      name: 'Project 9',
-      description: 'This is a description of Project 9.',
-      image: '../assets/download.png'
-    }
+
   ];
   return (
-    <div className={styles.projects}>
-      {projects.map((project, i) => (
-        <Link to={`/project/${project.id}`} key={i} className={styles.projectLink}>
-          <div className={styles.project}>
-            <img src={project.image} alt={project.name} />
-            <p>{project.description}</p>
-          </div>
-        </Link>
-      ))}
+    <div className={styles.projectsContainer}>
+      <div className={styles.spacer}></div> {/* Add this div */}
+      <div className={styles.projects}>
+        {projects.map((project, i) => (
+          <Link to={`/project/${project.id}`} className={styles.projectLink} key={i} target="_blank">
+            <div className={styles.project}>
+              <div className={styles.projectImage} style={{ backgroundImage: `url(${project.image})` }} />
+              <h2 className={styles.projectTitle}>{project.name}</h2>
+              <p className={styles.projectDescription}>{project.description}</p>
+            </div>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 }
