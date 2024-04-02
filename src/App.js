@@ -5,18 +5,17 @@ import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faFile } from '@fortawesome/free-regular-svg-icons';
 import Projects from './components/Projects';
-import Contact from './components/Contact';
 import Hero from './components/Hero'; 
-
+import ProjectDetail from './components/ProjectDetail'; // Update the path as necessary
 import './App.css';
+
 
 function App() {
   return (
     <Router>
-      <Hero />
       <Routes>
-        <Route path="projects" element={<Projects />} />
-        <Route path="contact" element={<Contact />} />
+        <Route path="/" element={<><Hero /><Projects /></>} />
+        <Route path="/project/:id" element={<ProjectDetail />} />
       </Routes>
       <div className="fixed-icons">
         <a href="mailto:jgreen142@my.gcu.edu">

@@ -1,19 +1,27 @@
-/* Projects.module.css */
-.projectsContainer {
-    padding: 20px;
-  }
-  
-  .projectItem {
-    margin: 10px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background-color: #f9f9f9;
-  }
-  
-  .projectItem h2 {
-    color: #333;
-  }
-  
-  /* Add more specific styles for your project items here */
-  
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  scroll-snap-align: start;
+  height: 100vh;
+  margin-top: 100px; /* Add some top margin */
+}
+
+.project {
+  font-size: 1.75em; /* Make the icons larger */
+  padding: 10px; /* Add space around the icons */
+  background-color: #F6EDEA; /* Change the color of the icons */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15); /* Add a shadow to the icons */
+  display: flex; /* Use flexbox to center the content */
+  align-items: center; /* Center the content vertically */
+  justify-content: center; /* Center the content horizontally */
+}
+.project img {
+  width: 100%;
+  height: auto;
+}
+.projectLink {
+  color: inherit;
+  text-decoration: none;
+}
