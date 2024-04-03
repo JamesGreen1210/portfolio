@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from '../styles/Navbar.module.css';
-import profileIcon from '../assets/profile-icon.png'; // Import the icon
+import profileIcon from '../assets/Images/profile-icon.png'; // Import the icon
 
 function Navbar() {
   return (

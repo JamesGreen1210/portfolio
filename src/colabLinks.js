@@ -1,0 +1,1 @@
+export const project1ColabLink = "https://colab.research.google.com/drive/1akJzuq6275pGUO1KjZo86nGVmK_Yww-R?usp=sharing";

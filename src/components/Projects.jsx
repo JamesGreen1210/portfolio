@@ -1,6 +1,9 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
+import { Element } from 'react-scroll';
+import { Fade } from 'react-awesome-reveal';
 import styles from '../styles/Projects.module.css';
-import downloadImage from '../assets/download.png'; // Import the image
+import downloadImage from '../assets/Images/download.png'; // Import the image
 
 
 function Projects() {
@@ -43,21 +46,21 @@ function Projects() {
     },
 
   ];
+  
   return (
-    <div className={styles.projectsContainer}>
-      <div className={styles.spacer}></div> {/* Add this div */}
-      <div className={styles.projects}>
-        {projects.map((project, i) => (
-          <Link to={`/project/${project.id}`} className={styles.projectLink} key={i} target="_blank">
+    <Element name="projects" className={styles.projects}>
+      {projects.map((project, i) => (
+        <Fade key={i}>
+          <Link to={`/project/${project.id}`} className={styles.projectLink}>
             <div className={styles.project}>
               <div className={styles.projectImage} style={{ backgroundImage: `url(${project.image})` }} />
               <h2 className={styles.projectTitle}>{project.name}</h2>
               <p className={styles.projectDescription}>{project.description}</p>
             </div>
           </Link>
-        ))}
-      </div>
-    </div>
+        </Fade>
+      ))}
+    </Element>
   );
 }
 

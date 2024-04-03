@@ -15,8 +15,6 @@ import Project4 from './components/Project4';
 import Project5 from './components/Project5';
 import Project6 from './components/Project6';
 
-
-
 function App() {
   useEffect(() => {
     Events.scrollEvent.register('begin', function () {
@@ -36,13 +34,13 @@ function App() {
   const handleWheel = (e) => {
     if (e.deltaY < 0) {
       scroller.scrollTo('hero', {
-        duration: 500,
+        duration: 800,
         delay: 0,
         smooth: 'easeInOutQuart'
       });
     } else {
       scroller.scrollTo('projects', {
-        duration: 500,
+        duration: 800,
         delay: 0,
         smooth: 'easeInOutQuart',
         offset: -35
