@@ -1,8 +1,8 @@
-import React from 'react';
 import styles from '../styles/Project1.module.css';
-import { project1ColabLink } from '../colabLinks';
 
 function Project1() {
+  const project1ColabLink = "https://JamesGreen1202.github.io/portfolio/YourNotebook1.html";
+
   return (
     <div className={styles.project1}>
       <h1>Quantum Machine Learning Project</h1>
