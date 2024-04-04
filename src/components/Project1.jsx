@@ -8,13 +8,16 @@ function Project1() {
       {/* ... rest of your content */}
       <p>What issues have I ran into?</p>
       {/* ... rest of your content */}
-      <iframe 
-        src={project1ColabLink} 
-        style={{ width: "100%", height: "600px" }} 
-        frameborder="0" 
-        allowfullscreen 
-        title="Google Colab Notebook"
-      />
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', overflow: 'hidden' }}>
+        <iframe 
+          src={project1ColabLink} 
+          style={{ width: "80%", height: "2000px", border: "2px solid black" }} 
+          frameborder="0" 
+          allowfullscreen 
+          title="Google Colab Notebook"
+          scrolling="no"
+        />
+      </div>
     </div>
   );
 }
