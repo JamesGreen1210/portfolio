@@ -1,0 +1,49 @@
+.project1 {
+    /* existing styles... */
+    background-color: #f5f5f5;
+}
+
+.project1 .header {
+    text-align: center;
+    font-size: 1.7em;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    font-weight: 500;
+    color: #333;
+    font-style: italic;
+}
+.project1 .buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.project1 .button {
+    padding: 4px 7px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    font-size: 0.8em; 
+}
+
+.project1 .button:hover {
+    transform: scale(1.05);
+}
+
+.project1 .iframeContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 20px;
+    padding-top: 15;
+}
+
+.project1 .iframeContainer iframe {
+    width: 80%;
+    height: 2000px;
+    border: 2px solid black;
+    box-shadow: -7px 5px 3px rgb(219, 219, 219);
+}
